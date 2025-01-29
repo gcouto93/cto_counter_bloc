@@ -1,3 +1,4 @@
+import 'package:cto_counter_bloc/widgets/drawer_widget_app.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,6 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: DrawerWidgetApp(),
       appBar: AppBar(
         title: const Text(''),
       ),
