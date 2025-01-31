@@ -1,4 +1,6 @@
 import 'package:cto_counter_bloc/aula_5/aula5_home_page.dart';
+import 'package:cto_counter_bloc/aula_5/features/bloc_example/bloc/bloc_freezed/example_freezed_bloc.dart';
+import 'package:cto_counter_bloc/aula_5/features/bloc_example/bloc/bloc_freezed_example.dart';
 import 'package:cto_counter_bloc/aula_5/features/bloc_example/bloc/example_bloc.dart';
 import 'package:cto_counter_bloc/aula_5/features/bloc_example/bloc_example.dart';
 import 'package:cto_counter_bloc/home_page.dart';
@@ -16,7 +18,10 @@ void main() {
       '/bloc': (_) => BlocProvider(create: (_) => CounterBloc(), child: CounterBlocPage()),
       '/cubit': (_) => BlocProvider(create: (_) => CounterCubit(), child: const CounterCubitPage()),
       '/aula5': (_) => BlocProvider(create: (_) => CounterCubit(), child: const Aula5HomePage()),
-      '/bloc/example': (_) => BlocProvider(create: (_) => ExampleBloc(), child: const BlocExample()),
+      '/bloc/example': (_) =>
+          BlocProvider(create: (_) => ExampleBloc()..add(ExampleFindNameEvent()), child: const BlocExample()),
+      '/bloc/example/freezed': (_) => BlocProvider(
+          create: (_) => ExampleFreezedBloc()..add(ExampleFreezedEvent.findNames()), child: const BlocFreezedExample()),
     },
   ));
 }
