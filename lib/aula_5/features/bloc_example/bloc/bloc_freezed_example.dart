@@ -18,7 +18,7 @@ class BlocFreezedExample extends StatelessWidget {
       ),
       body: BlocListener<ExampleFreezedBloc, ExampleFreezedState>(
         listener: (context, state) {
-          state.whenOrNull(showBanner: (message) {
+          state.whenOrNull(showBanner: (_, message) {
             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
           });
         },
@@ -40,7 +40,8 @@ class BlocFreezedExample extends StatelessWidget {
             ),
             BlocSelector<ExampleFreezedBloc, ExampleFreezedState, List<String>>(
               selector: (state) {
-                return state.maybeWhen(data: (names) => names, orElse: () => <String>[]);
+                return state.maybeWhen(
+                    data: (names) => names, showBanner: (names, _) => names, orElse: () => <String>[]);
               },
               builder: (context, state) {
                 return ListView.builder(
