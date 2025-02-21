@@ -25,9 +25,11 @@ class Aula5HomePage extends StatelessWidget {
               Navigator.of(context).pushNamed('/bloc/example/freezed');
             }),
             buttonPattern(context, 'Contact', () {
-              Navigator.of(context).pushNamed('/contact/list');
+              Navigator.of(context).pushNamed('/contacts/list');
             }),
-            buttonPattern(context, 'Contact Cubit', () {})
+            buttonPattern(context, 'Contact Cubit', () {
+              Navigator.of(context).pushNamed('/contact/cubit/list');
+            })
           ],
         ),
       ),

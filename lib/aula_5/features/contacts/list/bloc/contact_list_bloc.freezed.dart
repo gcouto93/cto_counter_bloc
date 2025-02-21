@@ -19,32 +19,38 @@ mixin _$ContactListEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() findAll,
+    required TResult Function(ContactModel model) delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? findAll,
+    TResult? Function(ContactModel model)? delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? findAll,
+    TResult Function(ContactModel model)? delete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ContactListEventFindAll value) findAll,
+    required TResult Function(_ContactListEventDelete value) delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ContactListEventFindAll value)? findAll,
+    TResult? Function(_ContactListEventDelete value)? delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ContactListEventFindAll value)? findAll,
+    TResult Function(_ContactListEventDelete value)? delete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -116,6 +122,7 @@ class _$ContactListEventFindAllImpl implements _ContactListEventFindAll {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() findAll,
+    required TResult Function(ContactModel model) delete,
   }) {
     return findAll();
   }
@@ -124,6 +131,7 @@ class _$ContactListEventFindAllImpl implements _ContactListEventFindAll {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? findAll,
+    TResult? Function(ContactModel model)? delete,
   }) {
     return findAll?.call();
   }
@@ -132,6 +140,7 @@ class _$ContactListEventFindAllImpl implements _ContactListEventFindAll {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? findAll,
+    TResult Function(ContactModel model)? delete,
     required TResult orElse(),
   }) {
     if (findAll != null) {
@@ -144,6 +153,7 @@ class _$ContactListEventFindAllImpl implements _ContactListEventFindAll {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ContactListEventFindAll value) findAll,
+    required TResult Function(_ContactListEventDelete value) delete,
   }) {
     return findAll(this);
   }
@@ -152,6 +162,7 @@ class _$ContactListEventFindAllImpl implements _ContactListEventFindAll {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ContactListEventFindAll value)? findAll,
+    TResult? Function(_ContactListEventDelete value)? delete,
   }) {
     return findAll?.call(this);
   }
@@ -160,6 +171,7 @@ class _$ContactListEventFindAllImpl implements _ContactListEventFindAll {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ContactListEventFindAll value)? findAll,
+    TResult Function(_ContactListEventDelete value)? delete,
     required TResult orElse(),
   }) {
     if (findAll != null) {
@@ -174,36 +186,198 @@ abstract class _ContactListEventFindAll implements ContactListEvent {
 }
 
 /// @nodoc
+abstract class _$$ContactListEventDeleteImplCopyWith<$Res> {
+  factory _$$ContactListEventDeleteImplCopyWith(
+          _$ContactListEventDeleteImpl value,
+          $Res Function(_$ContactListEventDeleteImpl) then) =
+      __$$ContactListEventDeleteImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ContactModel model});
+}
+
+/// @nodoc
+class __$$ContactListEventDeleteImplCopyWithImpl<$Res>
+    extends _$ContactListEventCopyWithImpl<$Res, _$ContactListEventDeleteImpl>
+    implements _$$ContactListEventDeleteImplCopyWith<$Res> {
+  __$$ContactListEventDeleteImplCopyWithImpl(
+      _$ContactListEventDeleteImpl _value,
+      $Res Function(_$ContactListEventDeleteImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ContactListEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? model = null,
+  }) {
+    return _then(_$ContactListEventDeleteImpl(
+      model: null == model
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as ContactModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContactListEventDeleteImpl implements _ContactListEventDelete {
+  const _$ContactListEventDeleteImpl({required this.model});
+
+  @override
+  final ContactModel model;
+
+  @override
+  String toString() {
+    return 'ContactListEvent.delete(model: $model)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ContactListEventDeleteImpl &&
+            (identical(other.model, model) || other.model == model));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, model);
+
+  /// Create a copy of ContactListEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ContactListEventDeleteImplCopyWith<_$ContactListEventDeleteImpl>
+      get copyWith => __$$ContactListEventDeleteImplCopyWithImpl<
+          _$ContactListEventDeleteImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() findAll,
+    required TResult Function(ContactModel model) delete,
+  }) {
+    return delete(model);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? findAll,
+    TResult? Function(ContactModel model)? delete,
+  }) {
+    return delete?.call(model);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? findAll,
+    TResult Function(ContactModel model)? delete,
+    required TResult orElse(),
+  }) {
+    if (delete != null) {
+      return delete(model);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ContactListEventFindAll value) findAll,
+    required TResult Function(_ContactListEventDelete value) delete,
+  }) {
+    return delete(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ContactListEventFindAll value)? findAll,
+    TResult? Function(_ContactListEventDelete value)? delete,
+  }) {
+    return delete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ContactListEventFindAll value)? findAll,
+    TResult Function(_ContactListEventDelete value)? delete,
+    required TResult orElse(),
+  }) {
+    if (delete != null) {
+      return delete(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ContactListEventDelete implements ContactListEvent {
+  const factory _ContactListEventDelete({required final ContactModel model}) =
+      _$ContactListEventDeleteImpl;
+
+  ContactModel get model;
+
+  /// Create a copy of ContactListEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ContactListEventDeleteImplCopyWith<_$ContactListEventDeleteImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$ContactListState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function(List<ContactModel> contacts) data,
+    required TResult Function(String message) error,
+    required TResult Function() loading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function(List<ContactModel> contacts)? data,
+    TResult? Function(String message)? error,
+    TResult? Function()? loading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function(List<ContactModel> contacts)? data,
+    TResult Function(String message)? error,
+    TResult Function()? loading,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ContactListStateInitial value) initial,
+    required TResult Function(_ContactListStateData value) data,
+    required TResult Function(_ContactListStateError value) error,
+    required TResult Function(_ContactListStateLoading value) loading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateLoading value)? loading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ContactListStateInitial value)? initial,
+    TResult Function(_ContactListStateData value)? data,
+    TResult Function(_ContactListStateError value)? error,
+    TResult Function(_ContactListStateLoading value)? loading,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -275,6 +449,9 @@ class _$ContactListStateInitialImpl implements _ContactListStateInitial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function(List<ContactModel> contacts) data,
+    required TResult Function(String message) error,
+    required TResult Function() loading,
   }) {
     return initial();
   }
@@ -283,6 +460,9 @@ class _$ContactListStateInitialImpl implements _ContactListStateInitial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function(List<ContactModel> contacts)? data,
+    TResult? Function(String message)? error,
+    TResult? Function()? loading,
   }) {
     return initial?.call();
   }
@@ -291,6 +471,9 @@ class _$ContactListStateInitialImpl implements _ContactListStateInitial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function(List<ContactModel> contacts)? data,
+    TResult Function(String message)? error,
+    TResult Function()? loading,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -303,6 +486,9 @@ class _$ContactListStateInitialImpl implements _ContactListStateInitial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ContactListStateInitial value) initial,
+    required TResult Function(_ContactListStateData value) data,
+    required TResult Function(_ContactListStateError value) error,
+    required TResult Function(_ContactListStateLoading value) loading,
   }) {
     return initial(this);
   }
@@ -311,6 +497,9 @@ class _$ContactListStateInitialImpl implements _ContactListStateInitial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateLoading value)? loading,
   }) {
     return initial?.call(this);
   }
@@ -319,6 +508,9 @@ class _$ContactListStateInitialImpl implements _ContactListStateInitial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ContactListStateInitial value)? initial,
+    TResult Function(_ContactListStateData value)? data,
+    TResult Function(_ContactListStateError value)? error,
+    TResult Function(_ContactListStateLoading value)? loading,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -330,4 +522,441 @@ class _$ContactListStateInitialImpl implements _ContactListStateInitial {
 
 abstract class _ContactListStateInitial implements ContactListState {
   factory _ContactListStateInitial() = _$ContactListStateInitialImpl;
+}
+
+/// @nodoc
+abstract class _$$ContactListStateDataImplCopyWith<$Res> {
+  factory _$$ContactListStateDataImplCopyWith(_$ContactListStateDataImpl value,
+          $Res Function(_$ContactListStateDataImpl) then) =
+      __$$ContactListStateDataImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ContactModel> contacts});
+}
+
+/// @nodoc
+class __$$ContactListStateDataImplCopyWithImpl<$Res>
+    extends _$ContactListStateCopyWithImpl<$Res, _$ContactListStateDataImpl>
+    implements _$$ContactListStateDataImplCopyWith<$Res> {
+  __$$ContactListStateDataImplCopyWithImpl(_$ContactListStateDataImpl _value,
+      $Res Function(_$ContactListStateDataImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ContactListState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? contacts = null,
+  }) {
+    return _then(_$ContactListStateDataImpl(
+      contacts: null == contacts
+          ? _value._contacts
+          : contacts // ignore: cast_nullable_to_non_nullable
+              as List<ContactModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContactListStateDataImpl implements _ContactListStateData {
+  _$ContactListStateDataImpl({required final List<ContactModel> contacts})
+      : _contacts = contacts;
+
+  final List<ContactModel> _contacts;
+  @override
+  List<ContactModel> get contacts {
+    if (_contacts is EqualUnmodifiableListView) return _contacts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_contacts);
+  }
+
+  @override
+  String toString() {
+    return 'ContactListState.data(contacts: $contacts)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ContactListStateDataImpl &&
+            const DeepCollectionEquality().equals(other._contacts, _contacts));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_contacts));
+
+  /// Create a copy of ContactListState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ContactListStateDataImplCopyWith<_$ContactListStateDataImpl>
+      get copyWith =>
+          __$$ContactListStateDataImplCopyWithImpl<_$ContactListStateDataImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<ContactModel> contacts) data,
+    required TResult Function(String message) error,
+    required TResult Function() loading,
+  }) {
+    return data(contacts);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<ContactModel> contacts)? data,
+    TResult? Function(String message)? error,
+    TResult? Function()? loading,
+  }) {
+    return data?.call(contacts);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<ContactModel> contacts)? data,
+    TResult Function(String message)? error,
+    TResult Function()? loading,
+    required TResult orElse(),
+  }) {
+    if (data != null) {
+      return data(contacts);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ContactListStateInitial value) initial,
+    required TResult Function(_ContactListStateData value) data,
+    required TResult Function(_ContactListStateError value) error,
+    required TResult Function(_ContactListStateLoading value) loading,
+  }) {
+    return data(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateLoading value)? loading,
+  }) {
+    return data?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ContactListStateInitial value)? initial,
+    TResult Function(_ContactListStateData value)? data,
+    TResult Function(_ContactListStateError value)? error,
+    TResult Function(_ContactListStateLoading value)? loading,
+    required TResult orElse(),
+  }) {
+    if (data != null) {
+      return data(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ContactListStateData implements ContactListState {
+  factory _ContactListStateData({required final List<ContactModel> contacts}) =
+      _$ContactListStateDataImpl;
+
+  List<ContactModel> get contacts;
+
+  /// Create a copy of ContactListState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ContactListStateDataImplCopyWith<_$ContactListStateDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ContactListStateErrorImplCopyWith<$Res> {
+  factory _$$ContactListStateErrorImplCopyWith(
+          _$ContactListStateErrorImpl value,
+          $Res Function(_$ContactListStateErrorImpl) then) =
+      __$$ContactListStateErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$ContactListStateErrorImplCopyWithImpl<$Res>
+    extends _$ContactListStateCopyWithImpl<$Res, _$ContactListStateErrorImpl>
+    implements _$$ContactListStateErrorImplCopyWith<$Res> {
+  __$$ContactListStateErrorImplCopyWithImpl(_$ContactListStateErrorImpl _value,
+      $Res Function(_$ContactListStateErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ContactListState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$ContactListStateErrorImpl(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContactListStateErrorImpl implements _ContactListStateError {
+  _$ContactListStateErrorImpl({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'ContactListState.error(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ContactListStateErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of ContactListState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ContactListStateErrorImplCopyWith<_$ContactListStateErrorImpl>
+      get copyWith => __$$ContactListStateErrorImplCopyWithImpl<
+          _$ContactListStateErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<ContactModel> contacts) data,
+    required TResult Function(String message) error,
+    required TResult Function() loading,
+  }) {
+    return error(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<ContactModel> contacts)? data,
+    TResult? Function(String message)? error,
+    TResult? Function()? loading,
+  }) {
+    return error?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<ContactModel> contacts)? data,
+    TResult Function(String message)? error,
+    TResult Function()? loading,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ContactListStateInitial value) initial,
+    required TResult Function(_ContactListStateData value) data,
+    required TResult Function(_ContactListStateError value) error,
+    required TResult Function(_ContactListStateLoading value) loading,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateLoading value)? loading,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ContactListStateInitial value)? initial,
+    TResult Function(_ContactListStateData value)? data,
+    TResult Function(_ContactListStateError value)? error,
+    TResult Function(_ContactListStateLoading value)? loading,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ContactListStateError implements ContactListState {
+  factory _ContactListStateError({required final String message}) =
+      _$ContactListStateErrorImpl;
+
+  String get message;
+
+  /// Create a copy of ContactListState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ContactListStateErrorImplCopyWith<_$ContactListStateErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ContactListStateLoadingImplCopyWith<$Res> {
+  factory _$$ContactListStateLoadingImplCopyWith(
+          _$ContactListStateLoadingImpl value,
+          $Res Function(_$ContactListStateLoadingImpl) then) =
+      __$$ContactListStateLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ContactListStateLoadingImplCopyWithImpl<$Res>
+    extends _$ContactListStateCopyWithImpl<$Res, _$ContactListStateLoadingImpl>
+    implements _$$ContactListStateLoadingImplCopyWith<$Res> {
+  __$$ContactListStateLoadingImplCopyWithImpl(
+      _$ContactListStateLoadingImpl _value,
+      $Res Function(_$ContactListStateLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ContactListState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ContactListStateLoadingImpl implements _ContactListStateLoading {
+  _$ContactListStateLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ContactListState.loading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ContactListStateLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<ContactModel> contacts) data,
+    required TResult Function(String message) error,
+    required TResult Function() loading,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<ContactModel> contacts)? data,
+    TResult? Function(String message)? error,
+    TResult? Function()? loading,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<ContactModel> contacts)? data,
+    TResult Function(String message)? error,
+    TResult Function()? loading,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ContactListStateInitial value) initial,
+    required TResult Function(_ContactListStateData value) data,
+    required TResult Function(_ContactListStateError value) error,
+    required TResult Function(_ContactListStateLoading value) loading,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateLoading value)? loading,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ContactListStateInitial value)? initial,
+    TResult Function(_ContactListStateData value)? data,
+    TResult Function(_ContactListStateError value)? error,
+    TResult Function(_ContactListStateLoading value)? loading,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ContactListStateLoading implements ContactListState {
+  factory _ContactListStateLoading() = _$ContactListStateLoadingImpl;
 }

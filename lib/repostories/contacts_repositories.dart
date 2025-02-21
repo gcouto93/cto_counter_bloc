@@ -7,5 +7,15 @@ class ContactsRepositories {
     return response.data?.map<ContactModel>((c) => ContactModel.fromJson(c)).toList();
   }
 
-  Future<void> create(ContactModel model) async {}
+  Future<void> create(ContactModel model) async {
+    final response = await Dio().post('http://10.0.2.2:3031/contacts', data: model.toJson());
+  }
+
+  Future<void> update(ContactModel model) async {
+    final response = await Dio().put('http://10.0.2.2:3031/contacts/${model.id}', data: model.toJson());
+  }
+
+  Future<void> delete(ContactModel model) async {
+    final response = await Dio().delete('http://10.0.2.2:3031/contacts/${model.id}');
+  }
 }
