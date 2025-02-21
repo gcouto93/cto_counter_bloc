@@ -29,4 +29,10 @@ class ContactListCubit extends Cubit<ContactListCubitState> {
     await _repository.delete(model);
     findAll();
   }
+
+  Future<void> create(ContactModel model) async {
+    emit(ContactListCubitState.loading());
+    await _repository.create(model);
+    findAll();
+  }
 }

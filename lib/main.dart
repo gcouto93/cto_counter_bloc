@@ -8,6 +8,7 @@ import 'package:cto_counter_bloc/aula_5/features/contacts/list/bloc/register/con
 import 'package:cto_counter_bloc/aula_5/features/contacts/list/contacts_list_page.dart';
 import 'package:cto_counter_bloc/aula_5/features/contacts/list/cubit/contact_list_cubit.dart';
 import 'package:cto_counter_bloc/aula_5/features/contacts/list/cubit/contacts_list_cubit_page.dart';
+import 'package:cto_counter_bloc/aula_5/features/contacts/list/cubit/register/contact_register_cubit_page.dart';
 import 'package:cto_counter_bloc/aula_5/features/contacts/register/contact_register_page.dart';
 import 'package:cto_counter_bloc/aula_5/features/contacts/update/bloc/contact_update_bloc.dart';
 import 'package:cto_counter_bloc/aula_5/features/contacts/update/contact_update_page.dart';
@@ -54,6 +55,12 @@ void main() {
           return BlocProvider(
             create: (context) => ContactListCubit(repository: context.read<ContactsRepositories>())..findAll(),
             child: ContactsListCubitPage(),
+          );
+        },
+        '/contact/cubit/register': (context) {
+          return BlocProvider(
+            create: (context) => ContactListCubit(repository: context.read<ContactsRepositories>()),
+            child: ContactRegisterCubitPage(),
           );
         }
       },

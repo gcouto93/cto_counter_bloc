@@ -10,6 +10,12 @@ class ContactsListCubitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          await Navigator.pushNamed(context, '/contact/cubit/register');
+          context.read<ContactListCubit>().findAll();
+        },
+      ),
       appBar: AppBar(
         title: const Text('Contact Cubit'),
       ),
