@@ -1,1 +1,19 @@
-{"contacts":[{"id":"jotinha","name":"Gab Dev","email":"devGabCto@email.com"},{"id":"2ef2d9f0-ee70-11ef-8ecf-ade68ac6e403","name":"kjhk","email":"vbnbntf"},{"id":"fd007a10-f00e-11ef-9e9e-5bd15800bc13","name":"dsad","email":"xczc"}]}
+{
+    "contacts": [
+        {
+            "id": "jotinha",
+            "name": "Gab Dev",
+            "email": "devGabCto@email.com"
+        },
+        {
+            "id": "2ef2d9f0-ee70-11ef-8ecf-ade68ac6e403",
+            "name": "kjhk",
+            "email": "vbnbntf"
+        },
+        {
+            "id": "fd007a10-f00e-11ef-9e9e-5bd15800bc13",
+            "name": "dsad",
+            "email": "xczc"
+        }
+    ]
+}
