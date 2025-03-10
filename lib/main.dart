@@ -12,6 +12,9 @@ import 'package:cto_counter_bloc/aula_5/features/contacts/list/cubit/register/co
 import 'package:cto_counter_bloc/aula_5/features/contacts/register/contact_register_page.dart';
 import 'package:cto_counter_bloc/aula_5/features/contacts/update/bloc/contact_update_bloc.dart';
 import 'package:cto_counter_bloc/aula_5/features/contacts/update/contact_update_page.dart';
+import 'package:cto_counter_bloc/aula_mobx/contador_codegen/contador_codegen_page.dart';
+import 'package:cto_counter_bloc/aula_mobx/contador_imc/imc_page.dart';
+import 'package:cto_counter_bloc/aula_mobx/mob_x_imc_page.dart';
 import 'package:cto_counter_bloc/home_page.dart';
 import 'package:cto_counter_bloc/models/contact_model.dart';
 import 'package:cto_counter_bloc/page_bloc/bloc/counter_bloc.dart';
@@ -31,18 +34,17 @@ void main() {
         '/bloc': (_) => BlocProvider(create: (_) => CounterBloc(), child: CounterBlocPage()),
         '/cubit': (_) => BlocProvider(create: (_) => CounterCubit(), child: const CounterCubitPage()),
         '/aula5': (_) => BlocProvider(create: (_) => CounterCubit(), child: const Aula5HomePage()),
-        '/bloc/example': (_) =>
-            BlocProvider(create: (_) => ExampleBloc()..add(ExampleFindNameEvent()), child: const BlocExample()),
-        '/bloc/example/freezed': (_) => BlocProvider(
-            create: (_) => ExampleFreezedBloc()..add(ExampleFreezedEvent.findNames()),
-            child: const BlocFreezedExample()),
+        '/mobx_page': (_) => BlocProvider(create: (_) => CounterCubit(), child: MobxPage()),
+        '/contador_codegen': (_) => BlocProvider(create: (_) => CounterCubit(), child: ContadorCodegenPage()),
+        '/contador_imc': (_) => BlocProvider(create: (_) => CounterCubit(), child: ImcPage()),
+        '/bloc/example': (_) => BlocProvider(create: (_) => ExampleBloc()..add(ExampleFindNameEvent()), child: const BlocExample()),
+        '/bloc/example/freezed': (_) =>
+            BlocProvider(create: (_) => ExampleFreezedBloc()..add(ExampleFreezedEvent.findNames()), child: const BlocFreezedExample()),
         '/contacts/list': (_) => BlocProvider(
-            create: (context) =>
-                ContactListBloc(repository: context.read<ContactsRepositories>())..add(ContactListEvent.findAll()),
+            create: (context) => ContactListBloc(repository: context.read<ContactsRepositories>())..add(ContactListEvent.findAll()),
             child: ContactsListPage()),
         '/contacts/register': (context) => BlocProvider(
-            create: (context) => ContactRegisterBloc(contactRepository: context.read<ContactsRepositories>()),
-            child: const ContactRegisterPage()),
+            create: (context) => ContactRegisterBloc(contactRepository: context.read<ContactsRepositories>()), child: const ContactRegisterPage()),
         '/contacts/update': (context) {
           final contact = ModalRoute.of(context)!.settings.arguments as ContactModel;
           return BlocProvider(

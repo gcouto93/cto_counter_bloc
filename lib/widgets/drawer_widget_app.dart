@@ -29,6 +29,30 @@ class DrawerWidgetApp extends StatelessWidget {
               Navigator.of(context).pushNamed('/aula5'); // Fecha o drawer
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.topic),
+            title: const Text('Mobx imc example'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).pushNamed('/mobx_page'); // Fecha o drawer
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.topic),
+            title: const Text('Codegen example'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).pushNamed('/contador_codegen'); // Fecha o drawer
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.topic),
+            title: const Text('Calculadora IMC Mobx'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).pushNamed('/contador_imc'); // Fecha o drawer
+            },
+          ),
         ],
       ),
     );

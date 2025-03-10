@@ -206,6 +206,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  currency_text_input_formatter:
+    dependency: "direct main"
+    description:
+      name: currency_text_input_formatter
+      sha256: cfa1267c65d154a302d80372b3d8e157a83c3f61ab87ad03294466bdfd5ced6f
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.9"
   dart_style:
     dependency: transitive
     description:
@@ -291,6 +299,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
+  flutter_mobx:
+    dependency: "direct main"
+    description:
+      name: flutter_mobx
+      sha256: ba5e93467866a2991259dc51cffd41ef45f695c667c2b8e7b087bf24118b50fe
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -360,6 +376,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      sha256: "3df61194eb431efc39c4ceba583b95633a403f46c9fd341e550ce0bfa50e9aa5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.20.2"
   io:
     dependency: transitive
     description:
@@ -480,6 +504,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  mobx:
+    dependency: "direct main"
+    description:
+      name: mobx
+      sha256: bf1a90e5bcfd2851fc6984e20eef69557c65d9e4d0a88f5be4cf72c9819ce6b0
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.0"
+  mobx_codegen:
+    dependency: "direct main"
+    description:
+      name: mobx_codegen
+      sha256: "990da80722f7d7c0017dec92040b31545d625b15d40204c36a1e63d167c73cdc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.7.0"
   mocktail:
     dependency: "direct main"
     description:
