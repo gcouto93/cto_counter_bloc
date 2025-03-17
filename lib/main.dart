@@ -17,6 +17,9 @@ import 'package:cto_counter_bloc/aula_mobx/contador_imc/imc_page.dart';
 import 'package:cto_counter_bloc/aula_mobx/mob_x_imc_page.dart';
 import 'package:cto_counter_bloc/home_page.dart';
 import 'package:cto_counter_bloc/models/contact_model.dart';
+import 'package:cto_counter_bloc/observables/future/future_page.dart';
+import 'package:cto_counter_bloc/observables/list/observable_list_page.dart';
+import 'package:cto_counter_bloc/observables/modelo_observado/modelo_observado_page.dart';
 import 'package:cto_counter_bloc/page_bloc/bloc/counter_bloc.dart';
 import 'package:cto_counter_bloc/page_bloc/counter_bloc_page.dart';
 import 'package:cto_counter_bloc/page_cubit/counter_cubit_page.dart';
@@ -37,6 +40,9 @@ void main() {
         '/mobx_page': (_) => BlocProvider(create: (_) => CounterCubit(), child: MobxPage()),
         '/contador_codegen': (_) => BlocProvider(create: (_) => CounterCubit(), child: ContadorCodegenPage()),
         '/contador_imc': (_) => BlocProvider(create: (_) => CounterCubit(), child: ImcPage()),
+        '/observable_list': (_) => BlocProvider(create: (_) => CounterCubit(), child: ObservableListPage()),
+        '/modelo_observado_page': (_) => BlocProvider(create: (_) => CounterCubit(), child: ModeloObservadoPage()),
+        '/future_page': (_) => BlocProvider(create: (_) => CounterCubit(), child: FuturePage()),
         '/bloc/example': (_) => BlocProvider(create: (_) => ExampleBloc()..add(ExampleFindNameEvent()), child: const BlocExample()),
         '/bloc/example/freezed': (_) =>
             BlocProvider(create: (_) => ExampleFreezedBloc()..add(ExampleFreezedEvent.findNames()), child: const BlocFreezedExample()),

@@ -23,7 +23,7 @@ class _ImcPageState extends State<ImcPage> {
 
   @override
   void initState() {
-    final reasctionErrorDisposer = reaction<bool>((_) => controller.hasError(), (hasError) {
+    final reasctionErrorDisposer = reaction<bool>((_) => controller.hasError, (hasError) {
       if (hasError) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text(controller.error!),

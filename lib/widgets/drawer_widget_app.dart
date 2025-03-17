@@ -53,6 +53,30 @@ class DrawerWidgetApp extends StatelessWidget {
               Navigator.of(context).pushNamed('/contador_imc'); // Fecha o drawer
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.topic),
+            title: const Text('Observable List Page'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).pushNamed('/observable_list'); // Fecha o drawer
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.topic),
+            title: const Text('Modelo observado Page'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).pushNamed('/modelo_observado_page'); // Fecha o drawer
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.topic),
+            title: const Text('Future Page'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).pushNamed('/future_page'); // Fecha o drawer
+            },
+          ),
         ],
       ),
     );

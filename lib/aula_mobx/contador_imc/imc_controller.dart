@@ -13,7 +13,7 @@ abstract class _ImcControllerBase with Store {
   String? error;
 
   @computed
-  bool hasError() => error != null;
+  bool get hasError => error != null;
 
   @action
   Future<void> calcularImc({required double peso, required double altura}) async {
@@ -27,7 +27,7 @@ abstract class _ImcControllerBase with Store {
       await Future.delayed(const Duration(seconds: 1));
       imc = peso / pow(altura, 2);
       if (imc > 30) {
-        throw Exception('Obesidade');k
+        throw Exception('Obesidade');
       }
     } on Exception catch (e) {
       error = 'Erro ao calcular IMC: $e';
